@@ -3,7 +3,7 @@ import produce from 'immer';
 // Todos os REDUCERS ouvem todas as ACTIONS
 export default function cart(state = [], action) {
   switch (action.type) {
-    case '@cart/ADD': //"case" <-- O REDUCER de carrinho quer ouvir todas as ACTIONS que são relacionadas apenas do carrinho
+    case '@cart/ADD_SUCCESS': //"case" <-- O REDUCER de carrinho quer ouvir todas as ACTIONS que são relacionadas apenas do carrinho
       return produce(state, draft => {
         const productIndex = draft.findIndex(p => p.id === action.product.id);
 
